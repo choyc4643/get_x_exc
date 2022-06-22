@@ -15,6 +15,13 @@ class _GetxNavigationScreenState extends State<GetxNavigationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          leading: IconButton(
+        icon: Icon(Icons.arrow_back_ios_new),
+        onPressed: () {
+          Get.back();
+        },
+      )),
       body: Center(
         child: SingleChildScrollView(
           child: Column(
@@ -123,6 +130,14 @@ class _GetxNavigationScreenState extends State<GetxNavigationScreen> {
                 },
                 child: Text(
                   'Bottom Sheet',
+                ),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Get.toNamed("/state");
+                },
+                child: Text(
+                  'State Screen 이동',
                 ),
               ),
             ],
